@@ -20,7 +20,6 @@
       ref="InputTel"
       v-model="inputValue"
       v-bind="$attrs"
-      :placeholder="labelValue"
       :type="type"
       class="input-tel__input"
       :disabled="disabled"
@@ -42,13 +41,11 @@
     >
     <label
       ref="label"
-      :for="id"
-      :class="error ? 'text-danger' : null"
       class="input-tel__label"
       :style="[labelColorStyle]"
       @click="focusInput"
     >
-      {{ hintValue || labelValue }}
+      {{ labelValue }}
     </label>
 
     <button

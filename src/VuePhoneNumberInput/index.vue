@@ -120,7 +120,8 @@
     data () {
       return {
         results: {},
-        userLocale: this.defaultCountryCode,
+        defaultCountryLocale: null,
+        userLocale: this.defaultCountryLocale,
         lastKeyPressed: null
       }
     },
@@ -202,7 +203,7 @@
       }
     },
     watch: {
-      defaultCountryCode (newValue, oldValue) {
+      defaultCountryLocale (newValue, oldValue) {
         if (newValue === oldValue) return
         this.setLocale(newValue)
       },
@@ -223,18 +224,22 @@
       }
     },
     async mounted () {
+      if (this.defaultCountryCode) {
+        const country = this.codesCountries.find(country => country.dialCode == this.defaultCountryCode)
+        this.defaultCountryLocale = country.iso2
+      }
       try {
-        if (this.phoneNumber && this.defaultCountryCode) this.emitValues({countryCode: this.defaultCountryCode, phoneNumber: this.phoneNumber})
+        if (this.phoneNumber && this.defaultCountryLocale) this.emitValues({countryCode: this.defaultCountryLocale, phoneNumber: this.phoneNumber})
 
-        if (this.defaultCountryCode && this.fetchCountry) {
+        if (this.defaultCountryLocale && this.fetchCountry) {
           throw new Error('MazPhoneNumberInput: Do not use "fetch-country" and "default-country-code" options in the same time')
         }
 
-        if (this.defaultCountryCode && this.noUseBrowserLocale) {
+        if (this.defaultCountryLocale && this.noUseBrowserLocale) {
           throw new Error('MazPhoneNumberInput: If you use a "default-country-code", do not use "no-use-browser-locale" options')
         }
 
-        if (this.defaultCountryCode) return
+        if (this.defaultCountryLocale) return
 
         this.fetchCountry
           ? this.fetchCountryCode()
