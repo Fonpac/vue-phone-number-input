@@ -186,7 +186,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: dodgerblue;
+  color: #1EB3FD;
 }
 
 hr {
@@ -206,12 +206,6 @@ hr {
   border-radius: 4px;
   border: 1px solid #EBEBEB;
 
-  &:hover {
-    box-shadow:
-      0 0 8px 0 rgba(232, 237, 250, 0.6),
-      0 2px 4px 0 rgba(232, 237, 250, 0.5);
-  }
-
   &.options {
     margin-bottom: 20px;
   }
@@ -227,19 +221,13 @@ hr {
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   flex: 1 0 48%;
 
-  &:hover {
-    box-shadow:
-      0 0 8px 0 rgba(232, 237, 250, 0.6),
-      0 2px 4px 0 rgba(232, 237, 250, 0.5);
-  }
-
   &.dark {
     background-color: $bg-color-dark;
     color: #FFF;
 
     textarea {
       background: $bg-color-dark;
-      color: dodgerblue;
+      color: #1EB3FD;
     }
   }
 }
@@ -273,22 +261,11 @@ table {
   .component {
     border: 1px solid $hover-color-dark;
     background-color: $bg-color-dark;
-
-    &:hover {
-      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    }
-
     color: rgba(255, 255, 255, 0.7);
   }
 
   hr {
     border-color: $hover-color-dark;
-  }
-
-  .btn {
-    &:hover {
-      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6), 0 2px 4px 0 rgba(0, 0, 0, 0.5) !important;
-    }
   }
 
   table tr {

@@ -93,7 +93,7 @@
     props: {
       value: { type: String, default: null },
       id: { type: String, default: 'MazPhoneNumberInput' },
-      color: { type: String, default: 'dodgerblue' },
+      color: { type: String, default: '#1EB3FD' },
       validColor: { type: String, default: 'yellowgreen' },
       errorColor: { type: String, default: 'orangered' },
       darkColor: { type: String, default: '#424242' },

@@ -32,7 +32,7 @@
       :disabled="disabled"
       class="country-selector__input"
       readonly
-      :style="[radiusLeftStyle, inputBorderStyle, inputBoxShadowStyle, inputBgColor]"
+      :style="[radiusLeftStyle, inputBorderStyle, inputBgColor]"
       @focus="isFocus = true"
       @keydown="keyboardNav"
       @click.stop="toggleList"
@@ -311,12 +311,12 @@
 
     &__label {
       position: absolute;
-      top: 3px;
+      background-color: white;
+      padding: 0 7px 0 7px;
+      top: -7px;
       cursor: pointer;
-      left: 11px;
-      transform: translateY(25%);
-      opacity: 0;
-      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      left: 13px;
+      opacity: 1;
       font-size: 11px;
       color: $secondary-color;
     }
@@ -361,7 +361,7 @@
     &__country-flag {
       margin: auto 0;
       position: absolute;
-      top: 21px;
+      top: 15px;
       left: 11px;
       z-index: 1;
       cursor: pointer;
@@ -521,20 +521,6 @@
         padding-left: 40px;
       }
     }
-
-    &.has-value,
-    &.has-hint {
-      .country-selector__label {
-        opacity: 1;
-        transform: translateY(0);
-        font-size: 11px;
-      }
-
-      .country-selector__input {
-        padding-top: 14px;
-      }
-    }
-
     // Disable theme
     &.is-disabled {
       .country-selector {
@@ -613,12 +599,6 @@
           /* stylelint-enable */
         }
       }
-
-      &.has-value {
-        .country-selector__input {
-          padding-top: 12px;
-        }
-      }
     }
 
     &.lg {
@@ -644,12 +624,6 @@
           -moz-transform: scale(0.45);
           -moz-transform-origin: 0 0;
           /* stylelint-enable */
-        }
-      }
-
-      &.has-value {
-        .country-selector__input {
-          padding-top: 18px;
         }
       }
     }

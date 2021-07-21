@@ -27,9 +27,7 @@
       :class="{ 'no-country-selector': noCountrySelector }"
       :style="[
         noCountrySelector ? radiusStyle : radiusRightStyle,
-        inputCaretStyle,
         inputBorderStyle,
-        inputBoxShadowStyle,
         inputBgColor,
         textColor
       ]"
@@ -41,7 +39,7 @@
     >
     <label
       ref="label"
-      class="input-tel__label_visible"
+      class="input-tel__label"
       :style="[labelColorStyle]"
       @click="focusInput"
     >
@@ -162,12 +160,12 @@
 
     &__label {
       position: absolute;
-      top: 4px;
+      background-color: white;
+      padding: 0 7px 0 7px;
+      top: -7px;
       cursor: pointer;
       left: 13px;
-      transform: translateY(25%);
-      opacity: 0;
-      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      opacity: 1;
       font-size: 11px;
       color: $secondary-color;
     }
@@ -338,7 +336,6 @@
       .input-tel {
         &__input {
           border-color: $primary-color;
-          box-shadow: 0 0 0 0.125rem $primary-color-transparency;
         }
 
         &__label {
@@ -346,16 +343,9 @@
         }
       }
 
-      &.has-error {
-        .input-tel__input {
-          box-shadow: 0 0 0 0.125rem $danger-color-transparency;
-        }
-      }
-
       &.is-valid {
         .input-tel__input {
           border-color: $success-color;
-          box-shadow: 0 0 0 0.125rem $success-color-transparency;
         }
       }
     }
@@ -366,10 +356,6 @@
         transform: translateY(0);
         font-size: 11px;
       }
-
-      .input-tel__input {
-        padding-top: 14px;
-      }
     }
 
     &.has-value,
@@ -378,10 +364,6 @@
         opacity: 1;
         transform: translateY(0);
         font-size: 11px;
-      }
-
-      .input-tel__input {
-        padding-top: 14px;
       }
     }
 
