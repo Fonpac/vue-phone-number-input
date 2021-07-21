@@ -323,14 +323,22 @@
   @import 'style-helpers';
 
   .vue-phone-number-input {
+    background-color: inherit;
+
     .select-country-container {
+      background-color: inherit;
       flex: 0 0 120px;
       width: 120px;
       min-width: 120px;
       max-width: 120px;
     }
 
+    .flex-1 {
+      background-color: inherit;
+    }
+
     &.sm .select-country-container {
+      background-color: inherit;
       flex: 0 0 110px;
       width: 110px;
       min-width: 110px;
@@ -338,6 +346,7 @@
     }
 
     &.lg .select-country-container {
+      background-color: inherit;
       flex: 0 0 130px;
       width: 130px;
       min-width: 130px;

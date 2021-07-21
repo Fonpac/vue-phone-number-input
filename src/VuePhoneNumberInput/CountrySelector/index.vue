@@ -296,6 +296,7 @@
 
   // Light Theme
   .country-selector {
+    background-color: inherit;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     position: relative;
     height: 40px;
@@ -309,9 +310,9 @@
 
     &__label {
       position: absolute;
-      background-color: white;
+      background-color: inherit;
       padding: 0 7px 0 7px;
-      top: -7px;
+      top: -8px;
       left: 13px;
       opacity: 1;
       font-size: 12px;
@@ -320,7 +321,7 @@
 
     &__input {
       cursor: pointer;
-      background-color: $bg-color;
+      background-color: inherit;
       position: relative;
       width: 100%;
       height: 40px;

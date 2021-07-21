@@ -151,6 +151,7 @@
   @import 'style-helpers';
 
   .input-tel {
+    background-color: inherit;
     position: relative;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     height: 40px;
@@ -158,9 +159,9 @@
 
     &__label {
       position: absolute;
-      background-color: white;
+      background-color: inherit;
       padding: 0 7px 0 7px;
-      top: -7px;
+      top: -8px;
       left: 13px;
       opacity: 1;
       font-size: 12px;
@@ -169,7 +170,7 @@
 
     &__input {
       cursor: text;
-      background-color: $bg-color;
+      background-color: inherit;
       transition-duration: 0.3s;
       position: relative;
       width: 100%;
