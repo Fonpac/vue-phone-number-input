@@ -41,7 +41,7 @@
     >
     <label
       ref="label"
-      class="input-tel__label"
+      class="input-tel__label_visible"
       :style="[labelColorStyle]"
       @click="focusInput"
     >
