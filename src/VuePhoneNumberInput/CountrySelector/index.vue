@@ -525,7 +525,7 @@
         cursor: not-allowed;
 
         &__input {
-          border-color: #CCC;
+          border-color: #808080;
           background-color: #F2F2F2;
           color: $disabled-color;
 

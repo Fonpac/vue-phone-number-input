@@ -386,7 +386,7 @@
       cursor: not-allowed;
 
       .input-tel__input {
-        border-color: #CCC;
+        border-color: #808080;
         background-color: #F2F2F2;
         color: $disabled-color;
 
