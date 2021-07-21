@@ -12,8 +12,6 @@
     }, size]"
     class="input-tel"
     @click="focusInput"
-    @mouseenter="updateHoverState(true)"
-    @mouseleave="updateHoverState(false)"
   >
     <input
       :id="id"
@@ -163,15 +161,14 @@
       background-color: white;
       padding: 0 7px 0 7px;
       top: -7px;
-      cursor: pointer;
       left: 13px;
       opacity: 1;
-      font-size: 11px;
+      font-size: 12px;
       color: $secondary-color;
     }
 
     &__input {
-      cursor: pointer;
+      cursor: text;
       background-color: $bg-color;
       transition-duration: 0.3s;
       position: relative;
@@ -186,10 +183,6 @@
       margin-left: -1px;
       height: 40px;
       min-height: 40px;
-
-      &:hover {
-        border-color: $primary-color;
-      }
 
       &:not(.no-country-selector) {
         border-top-left-radius: 0 !important;

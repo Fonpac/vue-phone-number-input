@@ -14,8 +14,6 @@
     }, size]"
     class="country-selector"
     @blur.capture="handleBlur"
-    @mouseenter="updateHoverState(true)"
-    @mouseleave="updateHoverState(false)"
   >
     <div
       v-if="value && !noFlags"
@@ -314,10 +312,9 @@
       background-color: white;
       padding: 0 7px 0 7px;
       top: -7px;
-      cursor: pointer;
       left: 13px;
       opacity: 1;
-      font-size: 11px;
+      font-size: 12px;
       color: $secondary-color;
     }
 
@@ -414,7 +411,7 @@
 
         &.hover,
         &.keyboard-selected {
-          background-color: $hover-color;
+          background-color: #1EB3FD;
         }
 
         &.selected {
@@ -476,7 +473,7 @@
 
             &:hover,
             &.keyboard-selected {
-              background-color: lighten($hover-color-dark, 10%);
+              background-color: lighten(#1EB3FD, 10%);
             }
           }
 
