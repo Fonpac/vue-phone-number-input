@@ -180,7 +180,7 @@
         return {
           colorValue: this.color,
           color: { color: this.color },
-          textColor: { color: '#747474' },
+          textColor: { color: '#808080' },
           textDarkColor: { color: 'rgba(255, 255, 255, 0.7)' },
           validColor: { color: this.validColor },
           errorColor: { color: this.errorColor },

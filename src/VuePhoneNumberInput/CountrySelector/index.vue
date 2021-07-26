@@ -331,7 +331,7 @@
       appearance: none;
       outline: none;
       border: 1px solid $third-color;
-      font-size: 13px;
+      font-size: 1rem;
       z-index: 0;
       padding-left: 8px;
       color: $text-color;

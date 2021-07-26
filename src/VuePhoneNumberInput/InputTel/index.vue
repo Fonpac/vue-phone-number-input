@@ -41,6 +41,7 @@
       :style="[labelColorStyle]"
       @click="focusInput"
     >
+      <span v-if="required" class="required">*</span>
       {{ labelValue }}
     </label>
 
@@ -110,7 +111,7 @@
       },
       labelValue () {
         const { label } = this
-        return this.required && label ? `${label} *` : label
+        return label
       },
       hintValue () {
         const { hint } = this
@@ -166,6 +167,7 @@
       opacity: 1;
       font-size: 12px;
       color: $secondary-color;
+      .required { color: $primary-color; }
     }
 
     &__input {
@@ -174,12 +176,12 @@
       transition-duration: 0.3s;
       position: relative;
       width: 100%;
-      padding: 0 12px;
+      padding: 0 16px;
       font-weight: 400;
       appearance: none;
       outline: none;
       border: 1px solid $third-color;
-      font-size: 14px;
+      font-size: 1rem;
       z-index: 0;
       margin-left: -1px;
       height: 40px;
